@@ -1,13 +1,13 @@
-    const express= require("express");
+    const express= require("express"); //using express package
     const app= express();
     const addTwoNumber= (n1,n2) => {
         return n1+n2;
     }
     app.get("/addTwoNumber", (req,res)=>{
-        const n1= parseInt(req.query.n1);
-        const n2=parseInt(req.query.n2);
+        const n1= parseInt(req.query.n1); //supplying n1 param
+        const n2=parseInt(req.query.n2); //supplying n2 param
         const result = addTwoNumber(n1,n2);
-        res.json({statuscocde:200, data: result }); 
+        res.json({statuscocde:200, data: result }); //sending json response
     });
 
     app.get("/", (req, res) => {
