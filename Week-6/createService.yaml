@@ -9,8 +9,8 @@ spec:
   externalTrafficPolicy: Cluster
   ports:
   - name: myport
-    port: 8037
+    port: 8037 #external port
     protocol: TCP
-    targetPort: 3040
+    targetPort: 3040 #internal port
   type: LoadBalancer
   
